@@ -2,13 +2,9 @@
    GLOBAL
    ======================================== */
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -17,32 +13,30 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
+a:focus-visible,
+video:focus-visible {
+    outline: 3px solid #9651ff;
+    outline-offset: 4px;
+}
 
 /* ========================================
    NAVIGATION
    ======================================== */
 
 .nav {
-    height: 62px;
+    min-height: 62px;
     border-bottom: 1px solid #c9d1ff;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 40px;
-
+    gap: 28px;
+    padding: 14px 40px;
     position: sticky;
     top: 0;
     z-index: 10;
-
     background: rgba(244, 245, 255, .94);
-
     backdrop-filter: blur(12px);
 }
 
@@ -54,11 +48,30 @@ a {
 .nav nav {
     display: flex;
     gap: 25px;
-
     font-size: 13px;
     font-weight: 700;
 }
 
+.nav nav a {
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 2px;
+    background: #3159f6;
+    transition: right .2s ease;
+}
+
+.nav nav a:hover::after,
+.nav nav a.active::after {
+    right: 0;
+}
 
 /* ========================================
    GENERAL LAYOUT
@@ -69,33 +82,35 @@ a {
     margin: auto;
 }
 
-
-/* ========================================
-   HERO / ABOUT
-   ======================================== */
-
 .hero {
-    height: 267px;
-
+    min-height: 267px;
     border-bottom: 1px solid #c9d1ff;
-
     display: flex;
     align-items: center;
+    padding: 52px 0;
 }
 
 .hero h1,
 .work h2,
+.page-section h2,
 .contact h2,
-.card h3 {
+.card h3,
+.cv-block h2,
+.cv-block h3 {
     font-family: 'Chakra Petch', sans-serif;
+}
+
+.eyebrow {
+    margin: 0 0 16px;
+    font-size: 11px !important;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
 .hero h1 {
     font-size: 70px;
     line-height: .9;
-
     letter-spacing: -4px;
-
     margin: 0 0 28px;
 }
 
@@ -104,74 +119,40 @@ a {
     font-size: 16px;
 }
 
-
 /* ========================================
    PROJECT SECTION
    ======================================== */
 
-.work {
-    padding: 67px 0 90px;
-}
+.work { padding: 67px 0 90px; }
 
 .work h2 {
     font-size: 40px;
     line-height: 1;
-
     margin: 0 0 30px;
-
     letter-spacing: -2px;
 }
 
-
-/* ========================================
-   PROJECT CARDS
-   ======================================== */
-
 .card {
     border: 1px solid #0d1128;
-
     border-radius: 17px;
-
     padding: 25px 23px 0;
-
     margin-bottom: 28px;
-
     overflow: hidden;
-
     transition: .25s;
 }
 
 .card:hover {
     transform: translateY(-3px);
-
     box-shadow: 7px 7px 0 #0d1128;
 }
 
-
-/* PROJECT COLOURS */
-
-.blue {
-    background: #3159f6;
-}
-
-.dark {
-    background: #11162b;
-    color: #f4f5ff;
-}
-
-.pale {
-    background: #e2e6ff;
-}
-
-
-/* ========================================
-   PROJECT META
-   ======================================== */
+.blue { background: #3159f6; }
+.dark { background: #11162b; color: #f4f5ff; }
+.pale { background: #e2e6ff; }
 
 .meta {
     display: flex;
     justify-content: space-between;
-
     font-size: 12px;
     font-weight: 700;
 }
@@ -181,362 +162,306 @@ a {
     line-height: 12px;
 }
 
-
-/* ========================================
-   PROJECT TEXT
-   ======================================== */
-
 .card h3 {
     font-size: 40px;
     line-height: 1;
-
     letter-spacing: -2px;
-
     margin: 31px 0 8px;
 }
 
 .card h4 {
     font-size: 15px;
-
     margin: 0 0 10px;
 }
 
 .card p {
     font-size: 15px;
     line-height: 1.45;
-
     margin: 0 0 25px;
-
     max-width: 1000px;
 }
 
-
 /* ========================================
-   HOUDINI VIDEO
+   VIDEO
    ======================================== */
 
 .video {
     height: 510px;
-
     background: #0d1128;
-
     border-radius: 13px;
-
     padding: 18px;
-
     position: relative;
-
     overflow: hidden;
 }
 
-
-/* Decorative purple border */
-
 .video::after {
     content: '';
-
     position: absolute;
-
     inset: 18px;
-
     border: 1px solid #9651ff;
-
     border-radius: 5px;
-
     pointer-events: none;
-
     z-index: 2;
 }
-
-
-/* ACTUAL VIDEO */
 
 .project-video {
     width: 100%;
     height: 100%;
-
     display: block;
-
-    /*
-       Shows the complete video rather
-       than cropping the edges.
-    */
-
     object-fit: contain;
-
     background: #0d1128;
-
     border-radius: 5px;
 }
 
-
-/*
-   When the browser puts the video
-   into fullscreen mode.
-*/
-
-.project-video:fullscreen {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    background: #000;
-}
-
-
-/* Safari fullscreen support */
-
+.project-video:fullscreen,
 .project-video:-webkit-full-screen {
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-
     background: #000;
 }
 
-
-/* ========================================
-   PROJECT TAGS
-   ======================================== */
-
 .tags {
     display: flex;
-
     gap: 24px;
-
     flex-wrap: wrap;
-
     padding: 20px 0;
-
     font-size: 10px;
-
     font-weight: 700;
 }
 
-
-/* ========================================
-   PROJECT PLACEHOLDERS
-   ======================================== */
-
 .placeholder {
     height: 360px;
-
     border: 1px dashed rgba(255, 255, 255, .45);
-
     border-radius: 9px;
-
     display: grid;
-
     place-items: center;
-
-    background: linear-gradient(
-        135deg,
-        #1b244a,
-        #090c1a
-    );
-
+    background: linear-gradient(135deg, #1b244a, #090c1a);
     font-size: 11px;
-
     letter-spacing: 2px;
 }
 
 .placeholder.light {
     border-color: #0d1128;
-
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(13, 17, 40, .05) 0 2px,
-        transparent 2px 12px
-    );
+    background: repeating-linear-gradient(45deg, rgba(13, 17, 40, .05) 0 2px, transparent 2px 12px);
 }
 
+/* ========================================
+   ABOUT / CONTENT PAGES
+   ======================================== */
+
+.page-section {
+    padding: 90px 0;
+    border-bottom: 1px solid #c9d1ff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.page-section h2 {
+    font-size: 48px;
+    line-height: .96;
+    letter-spacing: -2.5px;
+    margin: 0;
+}
+
+.body-copy p,
+.cv-block p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0 0 22px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    border: 1px solid #0d1128;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background .2s ease, color .2s ease;
+}
+
+.button:hover {
+    background: #0d1128;
+    color: #fff;
+}
+
+.button-secondary { background: #e2e6ff; }
 
 /* ========================================
-   CONTACT
+   CV
+   ======================================== */
+
+.cv-section { padding-top: 48px; }
+
+.cv-block {
+    display: grid;
+    grid-template-columns: minmax(140px, .32fr) 1fr;
+    gap: 48px;
+    padding: 42px 0;
+    border-bottom: 1px solid #c9d1ff;
+}
+
+.cv-block:last-child { border-bottom: 0; }
+
+.cv-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding-top: 7px;
+}
+
+.cv-block h2 {
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 0 0 18px;
+}
+
+.cv-block h3 {
+    font-size: 23px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-list span {
+    border: 1px solid #0d1128;
+    background: #e2e6ff;
+    padding: 11px 13px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cv-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.cv-contact { background: #3159f6; margin: 24px -24px 0; padding: 42px 24px; border: 1px solid #0d1128; }
+
+/* ========================================
+   CONTACT / FOOTER
    ======================================== */
 
 .contact {
     border-top: 1px solid #c9d1ff;
-
     padding: 90px 0;
 }
 
+.page-section + .contact { border-top: 0; }
+
 .contact-grid {
     display: grid;
-
     grid-template-columns: 1.25fr .75fr;
-
     gap: 70px;
-
     align-items: end;
 }
 
-.contact small {
-    font-size: 11px;
-
-    font-weight: 700;
-}
+.contact small { font-size: 11px; font-weight: 700; }
 
 .contact h2 {
     font-size: 85px;
-
     line-height: .88;
-
     letter-spacing: -5px;
-
     margin: 12px 0 0;
 }
 
 .contact p {
     line-height: 1.5;
-
     max-width: 380px;
 }
 
-
-/* ========================================
-   CONTACT BUTTON
-   ======================================== */
-
-.button {
-    display: inline-flex;
-
-    gap: 35px;
-
-    border: 1px solid #0d1128;
-
-    padding: 16px 20px;
-
-    font-size: 13px;
-
-    font-weight: 700;
-}
-
-.button:hover {
-    background: #0d1128;
-
-    color: #fff;
-}
-
-
-/* ========================================
-   FOOTER
-   ======================================== */
-
 footer {
     border-top: 1px solid #c9d1ff;
-
     padding: 22px 40px;
-
     display: flex;
-
     justify-content: space-between;
-
+    gap: 20px;
     font-size: 10px;
-
     font-weight: 700;
 }
-
 
 /* ========================================
    MOBILE
    ======================================== */
 
 @media (max-width: 760px) {
-
     .nav {
-        height: auto;
-
-        padding: 15px 20px;
-
         align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 13px 20px;
     }
 
     .name {
         font-size: 10px;
-
-        max-width: 250px;
-
         line-height: 1.4;
     }
 
     .nav nav {
-        font-size: 10px;
-
-        gap: 13px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 11px;
     }
 
-    .wrap {
-        width: calc(100% - 40px);
-    }
+    .wrap { width: calc(100% - 40px); }
 
-    .hero {
-        height: 230px;
-    }
-
-    .hero h1 {
-        font-size: 57px;
-    }
-
-    .work {
-        padding: 50px 0 60px;
-    }
+    .hero { min-height: 230px; padding: 42px 0; }
+    .hero h1 { font-size: 57px; }
+    .work { padding: 50px 0 60px; }
 
     .card {
         padding: 20px 17px 0;
-
         border-radius: 12px;
     }
 
-    .card h3 {
-        font-size: 29px;
-    }
+    .card h3 { font-size: 29px; }
 
+    .video { height: 280px; padding: 10px; }
+    .video::after { inset: 10px; }
+    .placeholder { height: 230px; }
 
-    /* MOBILE VIDEO */
+    .page-section { padding: 62px 0; }
+    .about-grid { grid-template-columns: 1fr; gap: 34px; }
+    .page-section h2 { font-size: 38px; }
 
-    .video {
-        height: 280px;
-
-        padding: 10px;
-    }
-
-    .video::after {
-        inset: 10px;
-    }
-
-
-    .placeholder {
-        height: 230px;
-    }
-
-    .contact {
-        padding: 65px 0;
-    }
-
-    .contact-grid {
+    .cv-block {
         grid-template-columns: 1fr;
-
-        gap: 30px;
+        gap: 18px;
+        padding: 34px 0;
     }
 
-    .contact h2 {
-        font-size: 57px;
+    .cv-label { padding-top: 0; }
+    .cv-block h2 { font-size: 32px; }
+    .cv-columns { grid-template-columns: 1fr; gap: 26px; }
+    .cv-contact { margin: 16px -12px 0; padding: 30px 18px; }
 
-        letter-spacing: -3px;
-    }
+    .contact { padding: 65px 0; }
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+    .contact h2 { font-size: 57px; letter-spacing: -3px; }
 
-    footer {
-        padding: 20px;
-
-        display: block;
-    }
-
-    footer span {
-        display: block;
-
-        margin: 5px 0;
-    }
+    footer { padding: 20px; display: block; }
+    footer span { display: block; margin: 5px 0; }
 }

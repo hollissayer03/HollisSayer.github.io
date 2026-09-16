@@ -1,265 +1,82 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Hollis Sayer — Interactive Developer</title>
-
+    <meta name="description" content="Selected technical design, procedural generation and real-time 3D projects by Hollis Sayer.">
+    <title>Projects — Hollis Sayer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <!-- NAVIGATION -->
-
     <header class="nav">
-
-        <a href="#top" class="name">
-            HOLLIS SAYER | TECHNICAL DESIGN | REAL-TIME 3D | UNREAL ENGINE |
-        </a>
-
-        <nav>
-            <a href="#projects">PROJECTS</a>
-            <a href="#About">ABOUT & CV</a>
-            <a href="#contact">CONTACT</a>
+        <a href="index.html" class="name">HOLLIS SAYER | TECHNICAL DESIGN | REAL-TIME 3D | UNREAL ENGINE |</a>
+        <nav aria-label="Primary navigation">
+            <a href="index.html" class="active" aria-current="page">PROJECTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="cv.html">CV</a>
         </nav>
-
     </header>
-
-
     <main id="top">
-
-        <!-- ABOUT -->
-
         <section class="hero">
-
             <div class="wrap">
-
-                <h1>About me</h1>
-
-                <p>
-                    Hi, I’m Hollis Jack McAuley-Sayer.
-                </p>
-
+                <p class="eyebrow">PORTFOLIO / SELECTED WORK</p>
+                <h1>Projects</h1>
+                <p>Technical design, procedural workflows and real-time interactive experiences.</p>
             </div>
-
         </section>
 
-
-        <!-- PROJECTS -->
-
-        <section id="work" class="work">
-
+        <section class="work" aria-labelledby="projects-heading">
             <div class="wrap">
-
-                <h2>PROJECTS</h2>
-
-
-                <!-- PROJECT 01 -->
+                <h2 id="projects-heading">PROJECTS</h2>
 
                 <article class="card blue">
-
-                    <div class="meta">
-                        <span>PROJECT / 01</span>
-                        <span>↗</span>
-                    </div>
-
-                    <h3>
-                        Houdini Digital Asset for Procedural Environment Generation
-                    </h3>
-
-                    <h4>
-                        Technical Design &amp; procedural workflow development
-                    </h4>
-
-                    <p>
-                        Creating large environments manually can be time-consuming
-                        and repetitive. I wanted to explore how a reusable procedural
-                        workflow could allow designers to rapidly generate and
-                        iterate on environments while maintaining creative control
-                        through exposed parameters.
-                    </p>
-
-
-                    <!-- HOUDINI VIDEO -->
-
+                    <div class="meta"><span>PROJECT / 01</span><span aria-hidden="true">↗</span></div>
+                    <h3>Houdini Digital Asset for Procedural Environment Generation</h3>
+                    <h4>Technical Design &amp; procedural workflow development</h4>
+                    <p>Creating large environments manually can be time-consuming and repetitive. I wanted to explore how a reusable procedural workflow could allow designers to rapidly generate and iterate on environments while maintaining creative control through exposed parameters.</p>
                     <div class="video">
-
-                        <video
-                            class="project-video"
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            controls
-                        >
-
-                            <source
-                                src="videos/houdini-portfolio-loop-under25mb.mp4"
-                                type="video/mp4"
-                            >
-
+                        <video class="project-video" autoplay muted loop playsinline controls preload="metadata">
+                            <source src="videos/houdini-portfolio-loop-under25mb.mp4" type="video/mp4">
                             Your browser does not support HTML video.
-
                         </video>
-
                     </div>
-
-
                     <div class="tags">
-                        <span>HOUDINI ENGINE</span>
-                        <span>PROCEDURAL GENERATION</span>
-                        <span>TECHNICAL ART</span>
+                        <span>HOUDINI ENGINE</span><span>PROCEDURAL GENERATION</span><span>TECHNICAL ART</span>
                     </div>
-
                 </article>
-
-
-                <!-- PROJECT 02 -->
 
                 <article class="card dark">
-
-                    <div class="meta">
-                        <span>PROJECT / 02</span>
-                        <span>↗</span>
-                    </div>
-
-                    <h3>
-                        AI-Assisted Level Design
-                    </h3>
-
-                    <h4>
-                        Generative AI &amp; traditional design comparison
-                    </h4>
-
-                    <p>
-                        A comparative exploration of how generative AI can assist
-                        level design while preserving designer intent, readability,
-                        flow and player experience.
-                    </p>
-
-                    <div class="placeholder">
-                        ADD PROJECT IMAGE / VIDEO
-                    </div>
-
+                    <div class="meta"><span>PROJECT / 02</span><span aria-hidden="true">↗</span></div>
+                    <h3>AI-Assisted Level Design</h3>
+                    <h4>Generative AI &amp; traditional design comparison</h4>
+                    <p>A comparative exploration of how generative AI can assist level design while preserving designer intent, readability, flow and player experience.</p>
+                    <div class="placeholder">ADD PROJECT IMAGE / VIDEO</div>
                     <div class="tags">
-                        <span>UNREAL ENGINE 5</span>
-                        <span>GENERATIVE AI</span>
-                        <span>LEVEL DESIGN</span>
+                        <span>UNREAL ENGINE 5</span><span>GENERATIVE AI</span><span>LEVEL DESIGN</span>
                     </div>
-
                 </article>
-
-
-                <!-- PROJECT 03 -->
 
                 <article class="card pale">
-
-                    <div class="meta">
-                        <span>PROJECT / 03</span>
-                        <span>↗</span>
-                    </div>
-
-                    <h3>
-                        Real-Time Interactive Experiences
-                    </h3>
-
-                    <h4>
-                        Gameplay systems, prototyping &amp; world building
-                    </h4>
-
-                    <p>
-                        Interactive experiments combining real-time 3D,
-                        gameplay systems and environmental design to create
-                        focused player experiences.
-                    </p>
-
-                    <div class="placeholder light">
-                        ADD PROJECT IMAGE / VIDEO
-                    </div>
-
+                    <div class="meta"><span>PROJECT / 03</span><span aria-hidden="true">↗</span></div>
+                    <h3>Real-Time Interactive Experiences</h3>
+                    <h4>Gameplay systems, prototyping &amp; world building</h4>
+                    <p>Interactive experiments combining real-time 3D, gameplay systems and environmental design to create focused player experiences.</p>
+                    <div class="placeholder light">ADD PROJECT IMAGE / VIDEO</div>
                     <div class="tags">
-                        <span>REAL-TIME 3D</span>
-                        <span>BLUEPRINTS</span>
-                        <span>GAME DEVELOPMENT</span>
+                        <span>REAL-TIME 3D</span><span>BLUEPRINTS</span><span>GAME DEVELOPMENT</span>
                     </div>
-
                 </article>
-
             </div>
-
         </section>
-
-
-        <!-- CONTACT -->
-
-        <section id="contact" class="contact">
-
-            <div class="wrap contact-grid">
-
-                <div>
-
-                    <small>GET IN TOUCH</small>
-
-                    <h2>
-                        LET’S WORK<br>
-                        TOGETHER.
-                    </h2>
-
-                </div>
-
-
-                <div>
-
-                    <p>
-                        I'm open to opportunities in technical design,
-                        real-time 3D and interactive development, as well
-                        as freelance and contract projects.
-                    </p>
-
-                    <a
-                        class="button"
-                        href="mailto:hollissayer03@gmail.com"
-                    >
-                        CONTACT ME <b>↗</b>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
     </main>
-
-
-    <!-- FOOTER -->
-
     <footer>
-
         <span>HOLLIS SAYER</span>
-
-        <span>
-            INTERACTIVE DEVELOPER / REAL-TIME 3D
-        </span>
-
+        <span>INTERACTIVE DEVELOPER / REAL-TIME 3D</span>
         <span>© 2026</span>
-
     </footer>
-
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
