@@ -509,3 +509,5 @@ dd{margin:0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.button{transition:none}.card:hover{transform:none}}
 
 .project-evidence{margin:28px 0;background:#e2e6ff;padding:16px;border:1px solid #c9d1ff;border-radius:12px}.project-evidence img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:white}.project-evidence figcaption{font-size:13px;line-height:1.6;margin-top:12px;color:#424a71}.system-block p{max-width:900px}
+
+.breakdown-choice{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}.breakdown-group{padding-top:65px;scroll-margin-top:110px}.breakdown-group>h2{font-family:'Chakra Petch',sans-serif;font-size:clamp(32px,4vw,48px);margin:0 0 24px}.case-section h3{font-family:'Chakra Petch',sans-serif;font-size:clamp(26px,3vw,36px);margin:0 0 25px}.case-section h4{font-size:16px;margin:28px 0 10px}.breakdown-group+.breakdown-group{margin-top:60px;border-top:3px solid #3159f6}.design-study{padding-top:40px}@media(max-width:760px){.breakdown-choice{flex-direction:column}.breakdown-choice .button{width:100%}.breakdown-group{padding-top:45px}}
