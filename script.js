@@ -1,1 +1,9 @@
-const cards=document.querySelectorAll('.card');const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.animate([{opacity:0,transform:'translateY(25px)'},{opacity:1,transform:'translateY(0)'}],{duration:600,easing:'cubic-bezier(.2,.7,.2,1)',fill:'forwards'});io.unobserve(e.target)}}),{threshold:.08});cards.forEach(c=>io.observe(c));
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+ const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+  if (entry.isIntersecting) {
+   entry.target.animate([{opacity:0,transform:'translateY(25px)'},{opacity:1,transform:'translateY(0)'}],{duration:600,easing:'ease-out'});
+   observer.unobserve(entry.target);
+  }
+ }), {threshold:0.08});
+ document.querySelectorAll('.card').forEach(card => observer.observe(card));
+}

@@ -465,3 +465,45 @@ footer {
     footer { padding: 20px; display: block; }
     footer span { display: block; margin: 5px 0; }
 }
+
+/* Portfolio case studies */
+html{scroll-padding-top:110px}
+.hero h1{line-height:1.03}
+.hero p{line-height:1.6}
+.project-link{margin-bottom:25px}
+.dark .button{border-color:#f4f5ff}
+.dark .button:hover{background:#f4f5ff;color:#11162b}
+.project-summary{min-height:150px;display:flex;flex-direction:column;justify-content:center;border-top:1px solid currentColor;border-bottom:1px solid currentColor;padding:25px 0}
+.project-summary span{font-size:clamp(16px,3vw,28px);font-weight:700}
+.project-summary p{margin:15px 0 0}
+.additional{margin-top:64px;padding-top:40px;border-top:1px solid #c9d1ff}
+.back-link{display:inline-block;margin-bottom:30px;font-size:12px;font-weight:700}
+.case-hero h1{font-size:clamp(36px,6vw,70px);letter-spacing:-2px;max-width:1000px}
+.case-hero p{max-width:780px}
+.case-body{padding-bottom:70px}
+.draft-note{border-left:3px solid #3159f6;padding:15px 20px;background:#e2e6ff;line-height:1.6;margin:32px 0}
+.case-section{padding:50px 0;border-bottom:1px solid #c9d1ff;scroll-margin-top:20px}
+.case-section h2{font-family:'Chakra Petch',sans-serif;font-size:clamp(28px,4vw,44px);line-height:1.12;margin:0 0 28px;letter-spacing:-1px}
+.case-section h3{font-size:22px;margin:0 0 18px}
+.case-section p,.case-section dd{line-height:1.65}
+.case-section p{max-width:850px}
+.caption{font-size:13px;color:#424a71}
+.overview-grid,.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.overview-grid{margin:0 0 28px}
+.overview-grid>div{padding:20px;background:#e2e6ff}
+dt{font-size:12px;font-weight:700;margin-bottom:10px}
+dd{margin:0}
+.case-nav{display:flex;flex-wrap:wrap;gap:20px;padding:24px 0;border-bottom:1px solid #c9d1ff;font-size:13px;font-weight:700}
+.case-nav a,.back-link{text-decoration:underline;text-underline-offset:5px}
+.evidence-slot{border:1px dashed #818bbb;border-radius:12px;background:#e9ecff;padding:28px;min-height:170px}
+.evidence-slot p{margin:15px 0}
+.evidence-slot span{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#424a71}
+.system-block{margin:35px 0 50px}
+.reasoning{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.process-flow{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin:28px 0;font-size:12px;font-weight:700}
+.process-flow span{padding:15px;background:#e2e6ff}
+.iteration-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.iteration-grid article{padding:24px 20px;border:1px solid #c9d1ff;border-radius:12px}
+.iteration-grid h3{margin-top:15px}
+@media(max-width:760px){.hero h1{font-size:clamp(36px,10vw,57px);letter-spacing:-2px}.evidence-grid,.overview-grid,.reasoning,.iteration-grid{grid-template-columns:1fr}.case-section{padding:35px 0}.case-nav{gap:20px;line-height:1.8}.video{height:auto;aspect-ratio:16/9}.button{gap:18px;font-size:12px}.tags{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.button{transition:none}.card:hover{transform:none}}
