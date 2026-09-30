@@ -507,3 +507,5 @@ dd{margin:0}
 .iteration-grid h3{margin-top:15px}
 @media(max-width:760px){.hero h1{font-size:clamp(36px,10vw,57px);letter-spacing:-2px}.evidence-grid,.overview-grid,.reasoning,.iteration-grid{grid-template-columns:1fr}.case-section{padding:35px 0}.case-nav{gap:20px;line-height:1.8}.video{height:auto;aspect-ratio:16/9}.button{gap:18px;font-size:12px}.tags{gap:14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.button{transition:none}.card:hover{transform:none}}
+
+.project-evidence{margin:28px 0;background:#e2e6ff;padding:16px;border:1px solid #c9d1ff;border-radius:12px}.project-evidence img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:white}.project-evidence figcaption{font-size:13px;line-height:1.6;margin-top:12px;color:#424a71}.system-block p{max-width:900px}
