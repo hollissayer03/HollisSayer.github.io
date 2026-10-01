@@ -514,3 +514,6 @@ dd{margin:0}
 
 /* Immediate navigation and predictable card interactions */
 html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none;box-shadow:none}.nav{backdrop-filter:none}.project-video{aspect-ratio:16/9}
+
+/* Keep touch and button feedback immediate. */
+a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
