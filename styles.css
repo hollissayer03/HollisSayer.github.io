@@ -518,4 +518,7 @@ html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none;box-s
 /* Keep touch and button feedback immediate. */
 a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
-.teaching-layer{margin:28px 0 40px}.teaching-layer h5{font-family:'Chakra Petch',sans-serif;font-size:clamp(20px,2.2vw,24px);line-height:1.4;margin:0 0 14px}.teaching-layer p{margin-bottom:24px}
+.teaching-layer{margin:28px 0 40px}.teaching-layer h5{font-family:'Chakra Petch',sans-serif;font-size:clamp(18px,2vw,20px);line-height:1.4;margin:0 0 14px}.teaching-layer p{margin-bottom:24px}
+
+/* Design headings sit above the smaller teaching layers. */
+.design-study>h4{font-family:'Chakra Petch',sans-serif;font-size:clamp(23px,2.5vw,26px);line-height:1.35;margin:32px 0 14px}
