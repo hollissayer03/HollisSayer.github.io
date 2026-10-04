@@ -522,3 +522,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Design headings sit above the smaller teaching layers. */
 .design-study>h4{font-family:'Chakra Petch',sans-serif;font-size:clamp(23px,2.5vw,26px);line-height:1.35;margin:32px 0 14px}
+
+/* Small tutorial screenshots sit beside the explanation. */
+.teaching-example{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:28px;align-items:start}.teaching-example p{margin:0}.teaching-image{display:block;border:1px solid #c9d1ff;border-radius:10px;overflow:hidden;background:#e2e6ff}.teaching-image img{display:block;width:100%;height:auto}@media(max-width:760px){.teaching-example{grid-template-columns:1fr;gap:18px}.teaching-image{width:min(240px,100%)}}
