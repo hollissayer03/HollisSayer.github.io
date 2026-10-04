@@ -525,3 +525,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Small tutorial screenshots sit beside the explanation. */
 .teaching-example{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:28px;align-items:start}.teaching-example p{margin:0}.teaching-image{display:block;border:1px solid #c9d1ff;border-radius:10px;overflow:hidden;background:#e2e6ff}.teaching-image img{display:block;width:100%;height:auto}@media(max-width:760px){.teaching-example{grid-template-columns:1fr;gap:18px}.teaching-image{width:min(240px,100%)}}
+
+/* Compact node stages with explanations alongside source screenshots. */
+.terrain-evolution{display:grid;gap:24px;margin:28px 0}.terrain-stage{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start;padding:22px;border:1px solid #c9d1ff;border-radius:12px;background:#e9ecff}.terrain-stage figure{margin:0}.terrain-stage img{display:block;width:100%;height:auto;border-radius:6px}.terrain-stage figcaption{font-size:12px;margin-top:8px;color:#424a71}.terrain-stage h4{font-size:20px;margin:0 0 12px}.terrain-stage p{margin:0 0 12px}.terrain-stage .eyebrow{margin-bottom:10px}@media(max-width:760px){.terrain-stage{grid-template-columns:1fr;padding:18px;gap:18px}.terrain-stage figure{width:min(280px,100%)}}
