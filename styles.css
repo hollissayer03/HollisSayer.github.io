@@ -534,3 +534,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Project titles lead the section headings at every screen size. */
 .hero.case-hero h1{font-size:clamp(44px,5.5vw,62px);line-height:1.05;letter-spacing:-3px;max-width:1120px;overflow-wrap:break-word}@media(max-width:760px){.hero.case-hero h1{font-size:clamp(38px,9vw,50px);letter-spacing:-2px}}
+
+/* Compact forest evidence beside the three reflection blocks. */
+.outcome-reflection-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;margin-top:28px}.outcome-reflection-layout>.project-evidence{margin:0;padding:12px}.outcome-reflection-copy>h4:first-child{margin-top:0}@media(max-width:760px){.outcome-reflection-layout{grid-template-columns:1fr;gap:24px}.outcome-reflection-layout>.project-evidence{width:min(320px,100%)}}
