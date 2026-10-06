@@ -537,3 +537,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Compact forest evidence beside the three reflection blocks. */
 .outcome-reflection-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;margin-top:28px}.outcome-reflection-layout>.project-evidence{margin:0;padding:12px}.outcome-reflection-copy>h4:first-child{margin-top:0}@media(max-width:760px){.outcome-reflection-layout{grid-template-columns:1fr;gap:24px}.outcome-reflection-layout>.project-evidence{width:min(320px,100%)}}
+
+/* Full reflection beside a substantial forest image. */
+#outcome{width:min(1480px,calc(100vw - 80px));margin-left:calc((100% - min(1480px,100vw - 80px))/2)}.outcome-reflection-layout{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:start}.outcome-reflection-layout>.project-evidence{padding:14px}.outcome-reflection-layout>.project-evidence img{max-height:none}@media(max-width:760px){#outcome{width:100%;margin-left:0}.outcome-reflection-layout{grid-template-columns:1fr;gap:24px}.outcome-reflection-layout>.project-evidence{width:100%}}
