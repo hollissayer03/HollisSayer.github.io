@@ -543,3 +543,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Project artwork alongside the hotel introduction. */
 .hotel-project-intro{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:center}.hotel-project-cover{margin:0}.hotel-project-cover img{display:block;width:100%;height:auto;border-radius:12px}.hotel-project-intro .breakdown-choice{gap:12px}@media(max-width:760px){.hotel-project-intro{grid-template-columns:1fr;gap:28px}.hotel-project-cover{width:min(360px,100%)}}
+
+/* Compact project team credits. */
+.team-credits{margin-top:56px;padding:32px 0 8px;border-top:1px solid #c9d1ff}.team-credits>h2{font-family:'Chakra Petch',sans-serif;font-size:28px;margin:0 0 24px}.team-credits-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}.team-credits-grid h3{font-size:16px;margin:0 0 16px}.team-credits-grid dl{margin:0}.team-credits-grid dl>div{margin-bottom:14px}.team-credits-grid dt{font-size:13px;margin-bottom:4px}.team-credits-grid dd{font-size:12px;line-height:1.5;color:#424a71}@media(max-width:900px){.team-credits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.team-credits-grid{grid-template-columns:1fr}}
