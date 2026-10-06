@@ -540,3 +540,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Full reflection beside a substantial forest image. */
 #outcome{width:min(1480px,calc(100vw - 80px));margin-left:calc((100% - min(1480px,100vw - 80px))/2)}.outcome-reflection-layout{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:start}.outcome-reflection-layout>.project-evidence{padding:14px}.outcome-reflection-layout>.project-evidence img{max-height:none}@media(max-width:760px){#outcome{width:100%;margin-left:0}.outcome-reflection-layout{grid-template-columns:1fr;gap:24px}.outcome-reflection-layout>.project-evidence{width:100%}}
+
+/* Project artwork alongside the hotel introduction. */
+.hotel-project-intro{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:40px;align-items:center}.hotel-project-cover{margin:0}.hotel-project-cover img{display:block;width:100%;height:auto;border-radius:12px}.hotel-project-intro .breakdown-choice{gap:12px}@media(max-width:760px){.hotel-project-intro{grid-template-columns:1fr;gap:28px}.hotel-project-cover{width:min(360px,100%)}}
