@@ -549,3 +549,6 @@ a,button{touch-action:manipulation}.button,.nav nav a::after{transition:none}
 
 /* Earlier guidance diagram alongside iteration and outcome. */
 .guidance-iteration-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.85fr);gap:32px;align-items:start}.guidance-iteration-layout>.project-evidence{margin:0;padding:12px}.guidance-iteration-layout>div>p:first-child{margin-top:0}@media(max-width:760px){.guidance-iteration-layout{grid-template-columns:1fr;gap:24px}}
+
+/* Portrait beside the About me introduction. */
+.about-intro{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:48px;align-items:center}.about-portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:14px;border:1px solid #c9d1ff}@media(max-width:760px){.about-intro{grid-template-columns:1fr;gap:26px}.about-portrait{width:min(260px,100%);height:auto}}
